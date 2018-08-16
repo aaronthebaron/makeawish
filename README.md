@@ -3,7 +3,7 @@
 
 ## System Description
 
-All items here are inside of a VPC called wonka. I went a little hard on the wonka theme, just couldn't get it out of my head. I decided to run a particular job instead of a generic linux command, but it's esentially the same thing. One could structure the command and arguments in the queue entry in multiple ways.
+All items here are inside of a VPC called wonka. I went a little hard on the wonka theme, just couldn't get it out of my head. I decided to run a particular job instead of a generic linux command, but it's essentially the same thing. One could structure the command and arguments in the queue entry in multiple ways.
 
 ### User Input
 
@@ -13,7 +13,7 @@ The webserver can also reach out to an S3 bucket where results are stored and di
 
 ### Job Queuing
 
-The `holdyourbreath.py` puts a request directly in the SQS queue named `wishes`. Since this is a silly example, the queue message is just some text, would most likely be instrucions of some sort in a real case. The queue is a normal queue, but there are some good arguments for the queue being a FIFO queue in the standard case you might use this for.
+The `holdyourbreath.py` puts a request directly in the SQS queue named `wishes`. Since this is a silly example, the queue message is just some text, would most likely be instructions of some sort in a real case. The queue is a normal queue, but there are some good arguments for the queue being a FIFO queue in the standard case you might use this for.
 
 ### Handing Out Homework
 
@@ -33,13 +33,13 @@ There are a couple of ways to scale out. If we need more counting to happen for 
 
 #### Downsides
 
-- There may be increased costs with Fargate or other technolgies that can get reduced using some other method.   
+- There may be increased costs with Fargate or other technologies that can get reduced using some other method.   
 - This seems to work okay for certain types of jobs but maybe not for more complex items, like jobs tied together.
 - Reporting results seems wonky this way. There would need to be a better way to gather and distribute results especially if the task were varied greatly in content and source.
 
 #### Alternatives
 
-Inifinite. I can think of a billion ways to do this with various pros and cons, many of them are way out bonkers ideas. A lot of it would be more around balancing costs in AWS than actual ability to scale process.
+Infinite. I can think of a billion ways to do this with various pros and cons, many of them are way out bonkers ideas. A lot of it would be more around balancing costs in AWS than actual ability to scale process.
 
 #### CI/CD
 
@@ -49,7 +49,7 @@ This is a pretty simple setup, so it might be nice to have complete test pipelin
 
 It seems like the easiest way to get results back to the original machine might be to write them to S3 and either poll for them from a browser, or otherwise notify of results like through a chatops system, email, etc. It also might be possible to put them in a queue as well and have something notifying for results. 
 
-#### Dependant Results
+#### Dependent Results
 
 There are maybe some better ways to do this, but since we're using ECS we can actually track task completion. We might construct another Lambda function that listens for a CloudWatch task complete event and can then check the status, slurp up the records and pass it back into the queue as a new/different job. The details would depend on the jobs we have and the format of the results but they could probably be constructed in a generic way. 
 
