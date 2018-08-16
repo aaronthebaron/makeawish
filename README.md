@@ -1,6 +1,4 @@
-# Hold Your Breath
-# Make A Wish
-# Count To Three  
+# Hold Your Breath, Make A Wish, Count To Three  
 
 
 ## System Description
