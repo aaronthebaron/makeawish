@@ -3,7 +3,10 @@
 
 ## System Description
 
-All items here are inside of a VPC called wonka. I went a little hard on the wonka theme, just couldn't get it out of my head. I decided to run a particular job instead of a generic linux command, but it's essentially the same thing. One could structure the command and arguments in the queue entry in multiple ways.
+All items here are inside of a VPC called wonka. I went a little hard on the wonka theme, just couldn't get it out of my head. I decided to run a particular job instead of a generic linux command, but it's essentially the same thing. One could structure the command and arguments in the queue entry in multiple ways. 
+
+System Diagram:
+![wonka web](https://raw.githubusercontent.com/aaronthebaron/makeawish/master/image/wonkaweb.png)
 
 ### User Input
 
