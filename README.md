@@ -10,7 +10,7 @@ System Diagram:
 
 ### User Input
 
-An ASG with 1 member that runs a single webpage in nginx. The page has a button that says, "Hold your breath, make a wish, country three". The button runs the `holdyourbreath.py`.
+An ASG with 1 member that runs a single webpage in nginx. The page has a button that says, "Hold your breath, make a wish, count to three". The button runs the `holdyourbreath.py`.
 
 The webserver can also reach out to an S3 bucket where results are stored and display them.
 
@@ -42,7 +42,7 @@ There are a couple of ways to scale out. If we need more counting to happen for 
 
 #### Alternatives
 
-Infinite. I can think of a billion ways to do this with various pros and cons, many of them are way out bonkers ideas. A lot of it would be more around balancing costs in AWS than actual ability to scale process.
+Infinite. I can think of a billion ways to do this with various pros and cons, many of them are way out bonkers ideas. A lot of it would be more around balancing costs in AWS than actual ability to scale processes.
 
 #### CI/CD
 
