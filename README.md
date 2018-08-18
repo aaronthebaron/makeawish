@@ -56,4 +56,6 @@ It seems like the easiest way to get results back to the original machine might 
 
 There are maybe some better ways to do this, but since we're using ECS we can actually track task completion. We might construct another Lambda function that listens for a CloudWatch task complete event and can then check the status, slurp up the records and pass it back into the queue as a new/different job. The details would depend on the jobs we have and the format of the results but they could probably be constructed in a generic way. 
 
+### If You've Come This Far
 
+[![Pure Imagination](https://img.youtube.com/vi/SVi3-PrQ0pY/0.jpg)](https://www.youtube.com/watch?v=SVi3-PrQ0pY)
